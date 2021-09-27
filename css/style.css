@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+:root {
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding-left:  15px;
+    padding-right:  15px;
+}
+
+body {
+    background-color: #6281fe;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* background styles */
+.bg {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+
+/* start the main styles */
+main {
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+}
+    
+/* header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+.header .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.header .logo img {
+    width: 30px;
+}
+.header .menu__btn {
+    border: none;
+    cursor: pointer;
+    background: none;
+    height: 25px;
+    width: 25px;
+    padding: 0 5px;
+}
+
+.header .menu__btn:hover {
+    background: rgba(114, 114, 114, 0.3);
+}
+
+.header .menu__btn::after,
+.header .menu__btn::before {
+    content: '';
+    width: 100%;
+    margin: 4px auto;
+    height: 2px;
+    display: block;
+    background: rgb(206, 206, 206);
+}
+
+
+
+/* text styles */
+.text h1 {
+    color: white;
+    font-size: 7vw;
+    line-height: .9em;
+    margin-bottom: 4vh;
+}
+.text p {
+    font-size: max(1vw, 14px);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 4vh;
+}
+
+/* nav styles */
+nav {
+    color: white;
+    padding: 10px 0;
+}
+
+nav * {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: max(1vw, 14px);
+}
+
+nav button {
+    background: #25292c;
+    border-radius: 4px;
+    border: none;
+}
+nav button:hover { filter: brightness(80%) ;}
